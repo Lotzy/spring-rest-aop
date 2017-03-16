@@ -4,11 +4,9 @@ package com.lotzy.sample.entity;
  * <pre>
  * Title: Message
  * Description:
- * Copyright: Copyright (c) 2017
- * Company: Almaviva S.p.A.
  * </pre>
  *
- * @author Lotzy (lotzy_l@yahoo.com)
+ * @author Lotzy
  * @version 1.0
  */
 public class Message {

@@ -8,12 +8,10 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 /**
  * <pre>
  * Title: AppConfigurator class
- * Description: Spring application configuration with annotations, must be specified in web.xml
- * Copyright: Copyright (c) 2017
- * Company: Almaviva S.p.A.
+ * Description: Spring application configuration with annotations
  * </pre>
  *
- * @author Lotzy (lotzy_l@yahoo.com)
+ * @author Lotzy
  * @version 1.0
  */
 @EnableWebMvc

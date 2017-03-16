@@ -14,11 +14,9 @@ import com.lotzy.sample.JUnitConfigurator;
  * <pre>
  * Title: TestGreetingService
  * Description:
- * Copyright: Copyright (c) 2017
- * Company: Almaviva S.p.A.
  * </pre>
  *
- * @author Lotzy (lotzy_l@yahoo.com)
+ * @author Lotzy
  * @version 1.0
  */
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,6 +25,7 @@ public class TestGreetingService {
 
 	@Autowired
 	private GreetingService service;
+
 	/**
 	 * Test method for {@link com.lotzy.sample.serviceimpl.GreetingServiceImpl#greet(java.lang.String)}.
 	 */

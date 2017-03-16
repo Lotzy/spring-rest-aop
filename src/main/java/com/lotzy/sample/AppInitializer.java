@@ -6,11 +6,9 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  * <pre>
  * Title: AppInitializer class
  * Description: As of servlet 3.0 there is no need for web.xml so to run Spring REST, this class is needed to initialize the servlet container
- * Copyright: Copyright (c) 2017
- * Company: Almaviva S.p.A.
  * </pre>
  *
- * @author Lotzy (lotzy_l@yahoo.com)
+ * @author Lotzy
  * @version 1.0
  */
 public class AppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
