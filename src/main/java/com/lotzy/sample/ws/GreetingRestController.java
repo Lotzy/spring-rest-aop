@@ -1,5 +1,7 @@
 package com.lotzy.sample.ws;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -10,15 +12,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.lotzy.sample.aspect.Auditable;
 import com.lotzy.sample.aspect.Loggable;
+import com.lotzy.sample.aspect.Review;
 import com.lotzy.sample.entity.Message;
 import com.lotzy.sample.service.GreetingService;
 
 /**
  * <pre>
- * Title: GreetingRestController
- * Description:
+ * Title: GreetingRestController class
+ * Description: REST controller with various request mappings
  * </pre>
  *
  * @author Lotzy
@@ -26,6 +31,8 @@ import com.lotzy.sample.service.GreetingService;
  */
 @RestController
 public class GreetingRestController {
+
+	private static final Logger log = LoggerFactory.getLogger(GreetingRestController.class);
 
 	@Autowired
 	private GreetingService service;
@@ -58,11 +65,18 @@ public class GreetingRestController {
 	 * @param name - request parameter specified in the GET URL
 	 * @return a JSON representation of the Message object, for example {"status":"Ok","msg":"hello, gigigi!"}
 	 */
-	@Loggable
+	@Review(method="GET")
 	@RequestMapping(value="/greeting", method=RequestMethod.GET, produces=MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Message> greetJson(@RequestParam(value="name", defaultValue="World") String name) {
 		String greeting = service.greet(name);
 		Message m = new Message("Ok", greeting);
+		ObjectMapper om = new ObjectMapper();
+		try {
+			log.debug(om.writeValueAsString(m));
+		}
+		catch (JsonProcessingException e) {
+			e.printStackTrace();
+		}
 		return new ResponseEntity<Message>(m, HttpStatus.OK);
 	}
 }

@@ -3,6 +3,8 @@ package com.lotzy.sample.aspect;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 /**
@@ -15,8 +17,10 @@ import org.springframework.stereotype.Component;
  * @version 1.0
  */
 @Aspect
-@Component //without this shit will not work
+@Component //without this will not work
 public class VeryUsefulAspect {
+
+	private static final Logger log = LoggerFactory.getLogger(VeryUsefulAspect.class);
 
 	/**
 	 * When @Around is used the method signature and structure must necessarily be like this
@@ -29,12 +33,12 @@ public class VeryUsefulAspect {
 	 */
 	@Around("@annotation(loggable)")
 	public Object myAdvice(ProceedingJoinPoint pjp, Loggable loggable) throws Throwable {
-		System.out.println("Executing myAdvice!! - Begin");
+		log.debug("Executing myAdvice!! - Begin");
 		Object returnValue = null;
 
-		System.out.println("Start method execution");
+		log.debug("Start method execution");
 		returnValue = pjp.proceed(); //this will execute the annotated method
-		System.out.println("After method execution");
+		log.debug("After method execution");
 		return returnValue;
 	}
 }
