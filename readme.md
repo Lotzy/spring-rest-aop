@@ -1,4 +1,4 @@
-#spring-rest-aop
+# spring-rest-aop
 
 Example project illustrating:
 
@@ -15,7 +15,7 @@ Example project illustrating:
 - how to access return value of the adivsed method
 - how to use log4j2 with JSON layout
 
-#Using the project:
+# Using the project:
 
 1. Import in Eclipse as maven project
 2. Deploy in Tomcat 8.0 under Eclipse
