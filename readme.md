@@ -9,10 +9,10 @@ Example project illustrating:
     - with request parameter
     - returning JSON response
 
-- how to use Spring AOP with custom annotation ad point cut
-- how to send parameters to the adivice
+- how to use Spring AOP with custom annotation as point cut
+- how to send parameters to the advice
 - how to get annotated method parameters
-- how to access return value of the adivsed method
+- how to access return value of the advised method
 - how to use log4j2 with JSON layout
 
 # Using the project:
