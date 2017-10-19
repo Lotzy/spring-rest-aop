@@ -7,8 +7,8 @@ import java.lang.annotation.Target;
 
 /**
  * <pre>
- * Title: Review
- * Description:
+ * Title: Review interface
+ * Description: Annotation definition
  * </pre>
  *
  * @author Lotzy

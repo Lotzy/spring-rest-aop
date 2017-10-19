@@ -2,8 +2,8 @@ package com.lotzy.sample.entity;
 
 /**
  * <pre>
- * Title: Message
- * Description:
+ * Title: Message class
+ * Description: POJO to illustrate object returning as JSON
  * </pre>
  *
  * @author Lotzy

@@ -12,13 +12,11 @@ import com.lotzy.sample.entity.Message;
 
 /**
  * <pre>
- * Title: ReviewingAspect
- * Description:
- * Copyright: Copyright (c) 2017
- * Company: Almaviva S.p.A.
+ * Title: ReviewingAspect class
+ * Description: Aspect definition class
  * </pre>
  *
- * @author Lotzy (lotzy_l@yahoo.com)
+ * @author Lotzy
  * @version 1.0
  */
 @Aspect
